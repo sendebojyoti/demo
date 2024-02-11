@@ -29,7 +29,7 @@ public class BlockingCallService {
                 .bodyToMono(String.class)
                 .block(); // Blocking call
         long endTime = System.currentTimeMillis();
-        log.info("Web Template Time: " + Long.toString(endTime - startTime));
+        log.info("Web Template Time: " + (endTime - startTime));
 
         return "Response from WebClient: " + response;
     }
@@ -41,7 +41,7 @@ public class BlockingCallService {
         long startTime = System.currentTimeMillis();
         String response = restTemplate.getForObject("https://jsonplaceholder.typicode.com/posts/1", String.class);
         long endTime = System.currentTimeMillis();
-        log.info("Rest Template Time: " + Long.toString(endTime - startTime));
+        log.info("Rest Template Time: " + (endTime - startTime));
 
         return "Response from RestTemplate: " + response;
     }

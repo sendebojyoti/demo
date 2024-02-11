@@ -8,6 +8,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Configuration
 public class WebClientRestTemplateConfig {
 
+    //add local RestTemplate and WebClient
     @Bean
     public RestTemplate restTemplate() {
         return new RestTemplate();

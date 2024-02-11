@@ -29,7 +29,7 @@ class CommandLineAppStartupRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        int i = 0,j = 0;
+        int i = 0, j = 0;
         do {
             blockingCallController.webClientBlockingCall();
             i++;
